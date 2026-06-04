@@ -12,7 +12,8 @@ console.log('SNACK 1:');
   const getLightestBike = (bikes) => {
     if (!bikes.length) return null;
 
-    let lightestBike = bikes[0];
+    const [firstBike] = bikes;
+    let lightestBike = firstBike;
 
     for (const bike of bikes) {
       const { weight } = bike;
