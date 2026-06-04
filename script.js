@@ -43,15 +43,17 @@ console.log('SNACK 2:');
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  const POINTS = { min: 50, max: 85 };
-  const FOULS_DRAWN = { min: 50, max: 100 };
+  const createTeam = (name) => ({ name, points: 0, foulsDrawn: 0 }); // Factory
 
   const teams = [
-    { name: 'Arsenal', points: 0, foulsDrawn: 0 },
-    { name: 'Chelsea', points: 0, foulsDrawn: 0 },
-    { name: 'Liverpool', points: 0, foulsDrawn: 0 },
-    { name: 'Manchester United', points: 0, foulsDrawn: 0 },
+    createTeam('Arsenal'),
+    createTeam('Chelsea'),
+    createTeam('Liverpool'),
+    createTeam('Manchester United'),
   ];
+
+  const POINTS = { min: 50, max: 85 };
+  const FOULS_DRAWN = { min: 50, max: 100 };
 
   for (const team of teams) {
     team.points = getRandomInt(POINTS.min, POINTS.max);
