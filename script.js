@@ -40,4 +40,45 @@
   Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
   Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
   */
+  const getRandomInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  const POINTS = { min: 50, max: 85 };
+  const FOULS_DRAWN = { min: 50, max: 100 };
+
+  const teams = [
+    { name: 'Arsenal', points: 0, foulsDrawn: 0 },
+    { name: 'Chelsea', points: 0, foulsDrawn: 0 },
+    { name: 'Liverpool', points: 0, foulsDrawn: 0 },
+    { name: 'Manchester United', points: 0, foulsDrawn: 0 },
+  ];
+
+  for (const team of teams) {
+    team.points = getRandomInt(POINTS.min, POINTS.max);
+    team.foulsDrawn = getRandomInt(FOULS_DRAWN.min, FOULS_DRAWN.max);
+  }
+
+  const getTeamsFoulsDrawn = (teams) => {
+    const result = [];
+
+    for (const team of teams) {
+      const { name, foulsDrawn } = team;
+      result.push({ name, foulsDrawn });
+    }
+
+    return result;
+  };
+
+  const teamsFoulsDrawn = getTeamsFoulsDrawn(teams);
+  console.log('Squadre e falli subiti:', teamsFoulsDrawn);
+  /*
+  Output:
+  Squadre e falli subiti: [
+    { name: 'Arsenal', foulsDrawn: 75 },
+    { name: 'Chelsea', foulsDrawn: 60 },
+    { name: 'Liverpool', foulsDrawn: 90 },
+    { name: 'Manchester United', foulsDrawn: 55 }
+  ]
+  */
 }
