@@ -1,5 +1,7 @@
+// Snack 1
+console.log('SNACK 1:');
+
 {
-  // Snack 1
   const bikes = [
     { name: 'Colnago', weight: 6.8 },
     { name: 'Tarmac', weight: 6.6 },
@@ -31,15 +33,12 @@
   // Output: "Tarmac è la bici più leggera, con un peso di 6.6 kg."
 }
 
+// --------------------------------------------------
+
+// Snack 2
+console.log('SNACK 2:');
+
 {
-  // Snack 2
-  /*
-  Creare un array di oggetti di squadre di calcio.
-  Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-  Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
-  Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
-  Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-  */
   const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
@@ -75,10 +74,10 @@
   /*
   Output:
   Squadre e falli subiti: [
-    { name: 'Arsenal', foulsDrawn: 75 },
-    { name: 'Chelsea', foulsDrawn: 60 },
-    { name: 'Liverpool', foulsDrawn: 90 },
-    { name: 'Manchester United', foulsDrawn: 55 }
+    { name: 'Arsenal', foulsDrawn: ... },
+    { name: 'Chelsea', foulsDrawn: ... },
+    { name: 'Liverpool', foulsDrawn: ... },
+    { name: 'Manchester United', foulsDrawn: ... }
   ]
   */
 }
